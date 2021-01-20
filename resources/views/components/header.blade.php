@@ -38,11 +38,8 @@
                                 </button>
 
                                 <!-- Profile dropdown -->
-                                <div
-                                    x-data="{ isOpen: false }"
-                                    class="ml-3 relative"
-                                >
-                                    <div @click="isOpen = !isOpen">
+                                <x-dropdown alignment="right">
+                                    <x-slot name="trigger">
                                         <button
                                             class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                                             id="user-menu"
@@ -55,45 +52,8 @@
                                                 alt=""
                                             >
                                         </button>
-                                    </div>
-                                    <div
-                                        x-show="isOpen" x-cloak
-                                        @keydown.escape.window="isOpen = false"
-                                        @click.away="isOpen = false"
-                                        x-transition:enter="transition ease-out duration-150 transform"
-                                        x-transition:enter-start="opacity-0 scale-95"
-                                        x-transition:enter-end="opacity-100 scale-100"
-                                        x-transition:leave="transition ease-in duration-150 transform"
-                                        x-transition:leave-start="opacity-100 scale-100"
-                                        x-transition:leave-end="opacity-0 scale-95"
-                                        class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg border border-gray-700 py-1 bg-nfsu-brand ring-1 ring-black ring-opacity-5"
-                                        role="menu"
-                                        aria-orientation="vertical"
-                                        aria-labelledby="user-menu"
-                                    >
-                                        <a
-                                            href="#"
-                                            class="block px-4 py-2 text-sm text-blue-200 hover:bg-gray-700 hover:text-blue-100"
-                                            role="menuitem"
-                                        >
-                                            Your Profile
-                                        </a>
-                                        <a
-                                            href="#"
-                                            class="block px-4 py-2 text-sm text-blue-200 hover:bg-gray-700 hover:text-blue-100"
-                                            role="menuitem"
-                                        >
-                                            Settings
-                                        </a>
-                                        <a
-                                            href="#"
-                                            class="block px-4 py-2 text-sm text-blue-200 hover:bg-gray-700 hover:text-blue-100"
-                                            role="menuitem"
-                                        >
-                                            Sign out
-                                        </a>
-                                    </div>
-                                </div>
+                                    </x-slot>
+                                </x-dropdown>
                             </div>
                         </div>
                         <div
