@@ -30,9 +30,6 @@ $alignmentClasses = [
         aria-orientation="vertical"
         aria-labelledby="user-menu"
     >
-        <x-dropdown-link href="#">Your Profile</x-dropdown-link>
-        <x-dropdown-link href="#">Settings</x-dropdown-link>
-        <x-dropdown-link href="#">Logout</x-dropdown-link>
+        {{ $slot }}
     </div>
 </div>
-
