@@ -5,7 +5,10 @@ module.exports = {
     extend: {
         colors: {
             'nfsu-brand': '#003548'
-        }
+        },
+        backgroundImage: theme => ({
+            'nfsu-map': "url('/storage/map.png');",
+        })
     },
   },
   variants: {

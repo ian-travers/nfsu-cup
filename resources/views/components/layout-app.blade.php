@@ -9,8 +9,8 @@
 </head>
 <body class="antialiased min-h-screen flex flex-col">
 <x-header></x-header>
-<main class="flex-grow">
-    <div class="m-8 px-6 py-4 border-4 border-dashed border-gray-200 rounded-lg">
+<main class="flex-grow bg-nfsu-map bg-no-repeat bg-cover bg-fixed">
+    <div class="m-8 px-6 py-4 border-4 border-dashed border-gray-200 rounded-lg text-white">
         {{ $slot }}
     </div>
 </main>
