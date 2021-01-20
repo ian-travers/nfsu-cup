@@ -12,21 +12,17 @@
                             </div>
                             <div class="hidden md:block">
                                 <div class="flex items-baseline space-x-2">
-                                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                    <a href="#"
-                                       class="text-blue-200 hover:bg-gray-700 hover:text-blue-100 px-3 py-2 rounded-md font-medium">Tourneys</a>
-
-                                    <a href="#"
-                                       class="text-blue-200 hover:bg-gray-700 hover:text-blue-100 px-3 py-2 rounded-md font-medium">Stats</a>
+                                    <x-nav-link route="tourneys">{{ __('tourneys') }}</x-nav-link>
+                                    <x-nav-link route="stats">{{ __('stats') }}</x-nav-link>
                                     <x-dropdown>
                                         <x-slot name="trigger">
                                             <button
-                                                class="text-blue-200 hover:bg-gray-700 hover:text-blue-100 px-3 py-2 rounded-md font-medium"
+                                                class="hover:bg-gray-700 hover:text-blue-100 px-3 py-2 rounded-md font-medium {{ substr(Route::currentRouteName(), 0, 6) == 'server' ? 'bg-gray-900 text-white' : 'text-blue-200' }}"
                                             >
                                                 {{ __('game-server') }}
                                             </button>
                                         </x-slot>
-                                        <x-dropdown-link href="#">{{ __('monitor') }}</x-dropdown-link>
+                                        <x-dropdown-link href="{{ route('server.monitor') }}">{{ __('monitor') }}</x-dropdown-link>
                                         <div class="border-t border-gray-500"></div>
                                         <x-dropdown-link href="#">{{ __('best-performers') }}</x-dropdown-link>
                                         <x-dropdown-link href="#">{{ __('ratings') }}</x-dropdown-link>
@@ -154,5 +150,3 @@
         </div>
     </div>
 </header>
-
-
