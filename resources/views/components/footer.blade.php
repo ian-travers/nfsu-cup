@@ -9,23 +9,9 @@
                             About
                         </h3>
                         <ul class="mt-4 space-y-4">
-                            <li>
-                                <a href="#" class="text-base text-blue-200 hover:text-blue-100">
-                                    NFSU Cup
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="text-base text-blue-200 hover:text-blue-100">
-                                    Tourneys
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="text-base text-blue-200 hover:text-blue-100">
-                                    Game Server
-                                </a>
-                            </li>
+                            <li><x-nav-link class="text-sm" route="about.nfsu-cup">NFSU Cup</x-nav-link></li>
+                            <li><x-nav-link class="text-sm" route="about.tourneys">{{ __('tourneys') }}</x-nav-link></li>
+                            <li><x-nav-link class="text-sm" route="about.game-server">{{ __('game-server') }}</x-nav-link></li>
                         </ul>
                     </div>
                     <div class="mt-12 md:mt-0">
@@ -33,17 +19,8 @@
                             Help
                         </h3>
                         <ul class="mt-4 space-y-4">
-                            <li>
-                                <a href="#" class="text-base text-blue-200 hover:text-blue-100">
-                                    Gameplay
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="text-base text-blue-200 hover:text-blue-100">
-                                    FAQ
-                                </a>
-                            </li>
+                            <li><x-nav-link class="text-sm" route="help.gameplay">{{ __('gameplay') }}</x-nav-link></li>
+                            <li><x-nav-link class="text-sm" route="help.faq">{{ __('faq') }}</x-nav-link></li>
                         </ul>
                     </div>
                 </div>
@@ -53,29 +30,10 @@
                             Downloads
                         </h3>
                         <ul class="mt-4 space-y-4">
-                            <li>
-                                <a href="#" class="text-base text-blue-200 hover:text-blue-100">
-                                    NFS Underground
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="text-base text-blue-200 hover:text-blue-100">
-                                    NFSU Client
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="text-base text-blue-200 hover:text-blue-100">
-                                    NFSU Save
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="text-base text-blue-200 hover:text-blue-100">
-                                    NFSU Save Patcher
-                                </a>
-                            </li>
+                            <li><x-nav-link class="text-sm" route="downloads.nfs-underground">{{ __('nfs-underground') }}</x-nav-link></li>
+                            <li><x-nav-link class="text-sm" route="downloads.nfsu-client">{{ __('nfsu-client') }}</x-nav-link></li>
+                            <li><x-nav-link class="text-sm" route="downloads.nfsu-save">{{ __('nfsu-save') }}</x-nav-link></li>
+                            <li><x-nav-link class="text-sm" route="downloads.nfsu-save-patcher">{{ __('nfsu-save-patcher') }}</x-nav-link></li>
                         </ul>
                     </div>
                     <div class="mt-12 md:mt-0">
@@ -83,29 +41,10 @@
                             Society
                         </h3>
                         <ul class="mt-4 space-y-4">
-                            <li>
-                                <a href="#" class="text-base text-blue-200 hover:text-blue-100">
-                                    News
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="text-base text-blue-200 hover:text-blue-100">
-                                    Blogs
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="text-base text-blue-200 hover:text-blue-100">
-                                    Contact
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="text-base text-blue-200 hover:text-blue-100">
-                                    Donate
-                                </a>
-                            </li>
+                            <li><x-nav-link class="text-sm" route="society.news">{{ __('news') }}</x-nav-link></li>
+                            <li><x-nav-link class="text-sm" route="society.blog">{{ __('blog') }}</x-nav-link></li>
+                            <li><x-nav-link class="text-sm" route="society.contact">{{ __('contact') }}</x-nav-link></li>
+                            <li><x-nav-link class="text-sm" route="society.donate">{{ __('donate') }}</x-nav-link></li>
                         </ul>
                     </div>
                 </div>
