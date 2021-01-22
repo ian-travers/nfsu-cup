@@ -65,6 +65,8 @@
                                 </x-dropdown>
                             </div>
                         </div>
+                        <!-- Language switcher -->
+                        <x-language-switcher class="absolute right-14 md:right-28 xl:right-3"></x-language-switcher>
                         <div
                             class="-mr-2 md:hidden"
                         >
