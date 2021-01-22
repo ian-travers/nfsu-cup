@@ -15,9 +15,32 @@ Route::group(['middleware' => 'language'], function () {
         return view('stats');
     })->name('stats');
 
-    Route::get('/server/monitor', function () {
-        return view('monitor');
-    })->name('server.monitor');
+    Route::group([
+        'prefix' => 'server',
+        'as' => 'server'
+    ], function () {
+        Route::get('/monitor', function () {
+            return view('server.monitor');
+        })->name('.monitor');
+        Route::get('/best-performers', function () {
+            return view('server.best-performers');
+        })->name('.best-performers');
+        Route::get('/rating', function () {
+            return view('server.rating');
+        })->name('.rating');
+    });
+
+    Route::group([
+        'prefix' => 'user',
+        'as' => 'user'
+    ], function () {
+        Route::get('/settings', function () {
+            return view('user.settings');
+        })->name('.settings');
+        Route::get('/logout', function () {
+            return view('user.logout');
+        })->name('.logout');
+    });
 
     Route::group([
         'prefix' => 'about',

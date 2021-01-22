@@ -24,8 +24,8 @@
                                         </x-slot>
                                         <x-dropdown-link href="{{ route('server.monitor') }}">{{ __('monitor') }}</x-dropdown-link>
                                         <div class="border-t border-gray-500"></div>
-                                        <x-dropdown-link href="#">{{ __('best-performers') }}</x-dropdown-link>
-                                        <x-dropdown-link href="#">{{ __('ratings') }}</x-dropdown-link>
+                                        <x-dropdown-link href="{{ route('server.best-performers') }}">{{ __('best-performers') }}</x-dropdown-link>
+                                        <x-dropdown-link href="{{ route('server.rating') }}">{{ __('ratings') }}</x-dropdown-link>
                                     </x-dropdown>
                                 </div>
                             </div>
@@ -35,14 +35,12 @@
                                 <button
                                     class="bg-nfsu-brand p-1 text-gray-400 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                                     <span class="sr-only">View notifications</span>
-                                    <!-- Heroicon name: bell -->
                                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
                                          viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                               d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
                                     </svg>
                                 </button>
-
                                 <!-- Profile dropdown -->
                                 <x-dropdown alignment="right">
                                     <x-slot name="trigger">
@@ -59,9 +57,8 @@
                                             >
                                         </button>
                                     </x-slot>
-                                    <x-dropdown-link href="#">Your Profile</x-dropdown-link>
-                                    <x-dropdown-link href="#">Settings</x-dropdown-link>
-                                    <x-dropdown-link href="#">Logout</x-dropdown-link>
+                                    <x-dropdown-link href="{{ route('user.settings') }}">{{ __('ettings') }}</x-dropdown-link>
+                                    <x-dropdown-link href="{{ route('user.logout') }}">{{ __('logout') }}</x-dropdown-link>
                                 </x-dropdown>
                             </div>
                         </div>
@@ -75,17 +72,11 @@
                                 @click="isOpen = !isOpen"
                                 class="bg-nfsu-brand inline-flex items-center justify-center p-2 rounded-md border border-gray-700 text-blue-200 hover:text-blue-100 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                                 <span class="sr-only">Open main menu</span>
-                                <!--
-                                  Menu open: "hidden", Menu closed: "block"
-                                -->
                                 <svg x-show="!isOpen" class="block h-6 w-6" fill="none" viewBox="0 0 24 24"
                                      stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                           d="M4 6h16M4 12h16M4 18h16"/>
                                 </svg>
-                                <!--
-                                  Menu open: "block", Menu closed: "hidden"
-                                -->
                                 <svg x-show="isOpen" class="block h-6 w-6" fill="none" viewBox="0 0 24 24"
                                      stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

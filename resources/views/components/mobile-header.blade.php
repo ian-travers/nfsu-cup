@@ -1,21 +1,18 @@
-<!--
-        Mobile menu, toggle classes based on menu state.
-        Open: "block", closed: "hidden"
-    -->
 <div
     x-show="isOpen"
     x-cloak
     class=" border-b border-gray-700 bg-nfsu-brand md:hidden"
 >
     <div class="px-2 py-3 space-y-1 sm:px-3">
-        <a href="#"
-           class="text-blue-200 hover:bg-gray-700 hover:text-blue-100 block px-3 py-2 rounded-md text-base font-medium">Tourneys</a>
+        <x-mobile-nav-link route="tourneys">{{ __('tourneys') }}</x-mobile-nav-link>
+        <x-mobile-nav-link route="stats">{{ __('stats') }}</x-mobile-nav-link>
+        <div class="text-sm font-semibold text-gray-400 tracking-widest uppercase text-center">
+            {{ __('game-server') }}
+        </div>
+        <x-mobile-nav-link route="server.monitor">{{ __('monitor') }}</x-mobile-nav-link>
+        <x-mobile-nav-link route="server.monitor">{{ __('best-performers') }}</x-mobile-nav-link>
+        <x-mobile-nav-link route="server.monitor">{{ __('rating') }}</x-mobile-nav-link>
 
-        <a href="#"
-           class="text-blue-200 hover:bg-gray-700 hover:text-blue-100 block px-3 py-2 rounded-md text-base font-medium">Stats</a>
-
-        <a href="#"
-           class="text-blue-200 hover:bg-gray-700 hover:text-blue-100 block px-3 py-2 rounded-md text-base font-medium">Game Server</a>
     </div>
     <div class="pt-4 pb-3 border-t border-gray-700">
         <div class="flex items-center px-5">
@@ -38,16 +35,8 @@
             </button>
         </div>
         <div class="mt-3 px-2 space-y-1">
-            <a href="#"
-               class="block px-3 py-2 rounded-md text-base font-medium text-blue-200 hover:text-blue-100 hover:bg-gray-700">Your
-                Profile</a>
-
-            <a href="#"
-               class="block px-3 py-2 rounded-md text-base font-medium text-blue-200 hover:text-blue-100 hover:bg-gray-700">Settings</a>
-
-            <a href="#"
-               class="block px-3 py-2 rounded-md text-base font-medium text-blue-200 hover:text-blue-100 hover:bg-gray-700">Sign
-                out</a>
+            <x-mobile-nav-link route="user.settings">{{ __('settings') }}</x-mobile-nav-link>
+            <x-mobile-nav-link route="user.logout">{{ __('logout') }}</x-mobile-nav-link>
         </div>
     </div>
 </div>
