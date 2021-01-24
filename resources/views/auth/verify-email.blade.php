@@ -25,4 +25,3 @@
         </div>
     </x-auth.card>
 </x-layout-auth>
-

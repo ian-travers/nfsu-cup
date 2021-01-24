@@ -41,4 +41,3 @@
         </form>
     </x-auth.card>
 </x-layout-auth>
-

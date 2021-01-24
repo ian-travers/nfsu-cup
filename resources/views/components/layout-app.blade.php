@@ -17,5 +17,3 @@
 <x-footer></x-footer>
 <script src="{{ mix('js/app.js', 'build') }}"></script>
 </body>
-
-
