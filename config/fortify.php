@@ -89,7 +89,7 @@ return [
     |
     */
 
-    'middleware' => ['web'],
+    'middleware' => ['web', Akaunting\Language\Middleware\SetLocale::class],
 
     /*
     |--------------------------------------------------------------------------
