@@ -7,6 +7,7 @@
            <x-auth.logo></x-auth.logo>
         </x-slot>
         <p class="py-3">{{ __('register-form-title') }}</p>
+        <x-validation-errors class="mb-4" />
         <form method="post" action="{{ route('register') }}">
             @csrf
             <div>

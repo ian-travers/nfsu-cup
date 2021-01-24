@@ -4,9 +4,9 @@
             <x-auth.logo></x-auth.logo>
         </x-slot>
         <p class="py-3">{{ __('reset-password-form-title') }}</p>
-        <form method="POST" action="{{ route('password.update') }}">
+        <x-validation-errors class="mb-4" />
+        <form method="post" action="{{ route('password.update') }}">
             @csrf
-
             <input type="hidden" name="token" value="{{ $request->route('token') }}">
 
             <div class="block">
