@@ -13,3 +13,6 @@ yarn-error.log
 /.idea
 /public/build
 notes.txt
+.phpstorm.meta.php
+_ide_help*.php
+
