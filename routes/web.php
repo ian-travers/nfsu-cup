@@ -7,6 +7,10 @@ Route::group(['middleware' => 'language'], function () {
         return view('welcome');
     })->name('home');
 
+    Route::get('/t', function () {
+        return view('temp');
+    });
+
     Route::get('/tourneys', function () {
         return view('tourneys');
     })->name('tourneys');
